@@ -2,8 +2,12 @@
     <div class="app-container">
         <!--头部-->
         <mt-header fixed title="固定在顶部"></mt-header>
+
         <!--主体-->
-        <router-view></router-view>
+       <transition name="main">
+           <router-view></router-view>
+       </transition>
+
         <!--底部导航栏-->
         <nav class="mui-bar mui-bar-tab">
             <router-link class="mui-tab-item " to="/home">
@@ -40,5 +44,38 @@
     .app-container {
         padding-top: 40px;
         padding-bottom: 50px;
+        overflow: hidden;
     }
+
+    /*路由组件过渡*/
+    .main-enter {
+        transform: translateX(100%);
+    }
+
+    .main-leave-to {
+        transform: translateX(-100%);
+    }
+    .main-enter-active,
+    .main-leave-active {
+        transition: all 1s ease;
+    }
+
+    .main-leave-active {
+        position: absolute;
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
