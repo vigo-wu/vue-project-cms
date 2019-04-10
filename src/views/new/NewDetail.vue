@@ -6,7 +6,7 @@
             <span>点击：{{ detailData.click }}次</span>
         </p>
         <div class="content" v-html="detailData.content"></div>
-        <comment-box></comment-box>
+        <comment-box :id = "id"></comment-box>
     </div>
 </template>
 
