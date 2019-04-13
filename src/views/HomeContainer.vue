@@ -1,6 +1,6 @@
 <template>
     <div>
-        <swipe :swipeData="dataList"></swipe>
+        <swipe :swipeData="dataList" :isFull="true"></swipe>
 
         <!--六宫格-->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
